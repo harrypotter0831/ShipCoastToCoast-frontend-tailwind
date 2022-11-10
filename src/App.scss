@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 // global css
+
+input, select, button {
+    outline: none;
+}
