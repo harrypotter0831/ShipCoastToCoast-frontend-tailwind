@@ -1,8 +1,12 @@
 import React from "react";
 import Header from "../../components/Header";
+import { Link } from "react-router-dom";
 
 import locationIcon from "../../assets/Icons/location.svg";
 import dashLineImage from "../../assets/Icons/input-dash-line.svg";
+import carShippingImage from '../../assets/car.svg';
+import rvImage from '../../assets/rv.svg';
+import clipboardImage from '../../assets/clipboard.svg';
 
 const Home = () => {
     return (
@@ -82,7 +86,52 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className="flex flex-col items-center py-12">
+                    <h1 className="text-primary text-[4rem] font-bold py-4">Our Services</h1>
+
+                    <div className="flex w-full justify-center">
+                        <div className="sm:w-1/3 md:w-1/4 max-w-[400px] mx-[20px] shadow">
+                            <div className="flex justify-around items-center aspect-[7/3]">
+                                <img className="w-[130px]" src={carShippingImage} alt='car shipping' />
+                            </div>
+                            <h2 className="text-[calc(1.325rem_+_.9vw)] font-medium bg-[#f0f0f0] text-primary p-4 text-center">Car Shipping</h2>
+                            <div className="flex flex-col items-center bg-[#f8f8f8] px-2 py-4">
+                                <Link className="text-lg text-[#707070] hover:underline" to={'/'}>Auto Transport</Link>
+                                <Link className="text-lg text-[#707070] hover:underline" to={'/'}>Classic Car Shipping</Link>
+                                <Link className="text-lg text-[#707070] hover:underline" to={'/'}>Enclosed Auto Transport</Link>
+                            </div>
+                        </div>
+
+                        <div className="sm:w-1/3 md:w-1/4 max-w-[400px] mx-[20px] shadow">
+                            <div className="flex justify-around items-center aspect-[7/3]">
+                                <img className="w-[127px]" src={rvImage} alt='specialty shipping' />
+                            </div>
+                            <h2 className="text-[calc(1.325rem_+_.9vw)] font-medium bg-[#f0f0f0] text-primary p-4 text-center">Car Shipping</h2>
+                            <div className="flex flex-col items-center bg-[#f8f8f8] px-2 py-4">
+                                <Link className="text-lg text-[#707070] hover:underline" to={'/'}>Rv Transport</Link>
+                                <Link className="text-lg text-[#707070] hover:underline" to={'/'}>Boat Transport</Link>
+                                <Link className="text-lg text-[#707070] hover:underline" to={'/'}>Motorcycle / ATV Shipping</Link>
+                                <Link className="text-lg text-[#707070] hover:underline" to={'/'}>Inoperable Vehicle Transport</Link>
+                            </div>
+                        </div>
+
+                        <div className="sm:w-1/3 md:w-1/4 max-w-[400px] mx-[20px] shadow">
+                            <div className="flex justify-around items-center aspect-[7/3]">
+                                <img className="w-[64px]" src={clipboardImage} alt='car shipping' />
+                            </div>
+                            <h2 className="text-[calc(1.325rem_+_.9vw)] font-medium bg-[#f0f0f0] text-primary p-4 text-center">Car Shipping</h2>
+                            <div className="flex flex-col items-center bg-[#f8f8f8] px-2 py-4">
+                                <Link className="text-lg text-[#707070] hover:underline" to={'/'}>FAQ's</Link>
+                                <Link className="text-lg text-[#707070] hover:underline" to={'/'}>Car Shipping Checklist</Link>
+                                <Link className="text-lg text-[#707070] hover:underline" to={'/'}>Transport Insurance</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            
         </div>
     )
 }
