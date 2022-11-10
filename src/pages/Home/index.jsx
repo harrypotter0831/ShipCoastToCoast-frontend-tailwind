@@ -1,6 +1,8 @@
 import React from "react";
-import Header from "../../components/Header";
 import { Link } from "react-router-dom";
+
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 import locationIcon from "../../assets/Icons/location.svg";
 import dashLineImage from "../../assets/Icons/input-dash-line.svg";
@@ -12,6 +14,7 @@ const Home = () => {
     return (
         <div className="hoem-container flex flex-col w-full">
             <Header />
+
             <div className="w-full flex flex-col">
                 <div className="flex">
                     <div className="flex justify-center flex-col bg-home-image bg-cover py-10 px-[calc(10%)] w-1/2">
@@ -107,7 +110,7 @@ const Home = () => {
                             <div className="flex justify-around items-center aspect-[7/3]">
                                 <img className="w-[127px]" src={rvImage} alt='specialty shipping' />
                             </div>
-                            <h2 className="text-[calc(1.325rem_+_.9vw)] font-medium bg-[#f0f0f0] text-primary p-4 text-center">Car Shipping</h2>
+                            <h2 className="text-[calc(1.325rem_+_.9vw)] font-medium bg-[#f0f0f0] text-primary p-4 text-center">Specialty Shipping</h2>
                             <div className="flex flex-col items-center bg-[#f8f8f8] px-2 py-4">
                                 <Link className="text-lg text-[#707070] hover:underline" to={'/'}>Rv Transport</Link>
                                 <Link className="text-lg text-[#707070] hover:underline" to={'/'}>Boat Transport</Link>
@@ -120,7 +123,7 @@ const Home = () => {
                             <div className="flex justify-around items-center aspect-[7/3]">
                                 <img className="w-[64px]" src={clipboardImage} alt='car shipping' />
                             </div>
-                            <h2 className="text-[calc(1.325rem_+_.9vw)] font-medium bg-[#f0f0f0] text-primary p-4 text-center">Car Shipping</h2>
+                            <h2 className="text-[calc(1.325rem_+_.9vw)] font-medium bg-[#f0f0f0] text-primary p-4 text-center">Auto Transport Tips</h2>
                             <div className="flex flex-col items-center bg-[#f8f8f8] px-2 py-4">
                                 <Link className="text-lg text-[#707070] hover:underline" to={'/'}>FAQ's</Link>
                                 <Link className="text-lg text-[#707070] hover:underline" to={'/'}>Car Shipping Checklist</Link>
@@ -131,7 +134,7 @@ const Home = () => {
                 </div>
             </div>
 
-            
+            <Footer />
         </div>
     )
 }
