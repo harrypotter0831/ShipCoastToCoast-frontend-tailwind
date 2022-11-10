@@ -1,7 +1,7 @@
 import { useRoutes } from "react-router-dom";
 import Home from "../pages/Home"
 
-export default function Router() {
+export default function Routes() {
     return useRoutes([
         {
             path: '/',
