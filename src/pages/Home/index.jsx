@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
@@ -15,6 +16,10 @@ const Home = () => {
 
     const submitHandle = () => {
 
+    }
+
+    function onChange(value) {
+        console.log("Captcha value:", value);
     }
 
     return (
@@ -163,6 +168,11 @@ const Home = () => {
                                             </div>
                                         </div>
                                     </div>
+
+                                    <ReCAPTCHA
+                                        sitekey="Your client site key"
+                                        onChange={onChange}
+                                    />
                                 </>
                             )
                         }

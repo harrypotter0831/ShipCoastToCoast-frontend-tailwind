@@ -6,7 +6,7 @@ import logoSm from "../../assets/Logo--sm.svg";
 import logoXs from "../../assets/Logo--xs.svg";
 
 const Header = () => {
-    const [menuToggle, setMenuToggle] = useState(false);
+    const [menuToggle, setMenuToggle] = useState(true);
 
     return (
         <div className="flex justify-around">
