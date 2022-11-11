@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Header from "../../components/Header";
@@ -11,6 +11,12 @@ import rvImage from '../../assets/rv.svg';
 import clipboardImage from '../../assets/clipboard.svg';
 
 const Home = () => {
+    const [step, setStep] = useState(1);
+
+    const submitHandle = () => {
+
+    }
+
     return (
         <div className="hoem-container flex flex-col w-full">
             <Header />
@@ -33,9 +39,9 @@ const Home = () => {
                     <div className="flex flex-col w-full lg:w-1/2 bg-home-gradient p-6 md:p-12">
                         <p className="font-extrabold text-[#045e73] text-lg mb-4">GET YOUR QUOTES: STEP {'3'} OF 3</p>
                         <div className="w-full flex">
-                            <span className="rounded-full bg-[#d9d9d9] block h-[9px] w-[30px] mr-4"></span>
-                            <span className="rounded-full bg-[#ffffff] block h-[9px] w-[120px] mr-4"></span>
-                            <span className="rounded-full bg-[#d9d9d9] block h-[9px] w-[30px]"></span>
+                            <span className={`rounded-full block h-[9px] ${step === 1 ? "bg-[#ffffff] w-[120px]" : "bg-[#d9d9d9] w-[30px]"} mr-4`}></span>
+                            <span className={`rounded-full block h-[9px] ${step === 2 ? "bg-[#ffffff] w-[120px]" : "bg-[#d9d9d9] w-[30px]"} mr-4`}></span>
+                            <span className={`rounded-full block h-[9px] ${step === 3 ? "bg-[#ffffff] w-[120px]" : "bg-[#d9d9d9] w-[30px]"}`}></span>
                         </div>
                         <h1 className="text-white text-[calc(1.475rem_+_2.7vw)] font-light leading-tight md:mb-8 md:mr-8">
                             Tell us where you're going?
@@ -49,7 +55,7 @@ const Home = () => {
                                 </div>
                                 <div className="flex px-[9px] items-start mt-2">
                                     <img className="mr-[calc(10px_+_.5rem)]" src={dashLineImage} alt='dash-line' />
-                                    <div className="flex flex-col md:flex-row items-center w-full">
+                                    <div className="flex flex-col md:flex-row items-center w-full 2xl:w-[70%]">
                                         <input className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Ciry, State" />
                                         <p className="font-bold text-lg text-white mx-3 my-2">OR</p>
                                         <input className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Zip Code" />
@@ -63,7 +69,7 @@ const Home = () => {
                                 </div>
                                 <div className="flex px-[9px] items-start mt-2">
                                     <img className="mr-[calc(10px_+_.5rem)]" src={dashLineImage} alt='dash-line' />
-                                    <div className="flex flex-col md:flex-row items-center w-full">
+                                    <div className="flex flex-col md:flex-row items-center w-full 2xl:w-[70%]">
                                         <input className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Ciry, State" />
                                         <p className="font-bold text-lg text-white mx-3 my-2">OR</p>
                                         <input className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Zip Code" />
@@ -76,16 +82,21 @@ const Home = () => {
                                     <h4 className="font-bold text-xl text-white">When</h4>
                                 </div>
                                 <div className="flex px-[9px] items-start mt-2">
-                                    <div className="flex items-center w-5/6 ml-[20px]">
+                                    <div className="flex items-center ml-[20px] w-full 2xl:w-[70%]">
                                         <input className="w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" type='date' placeholder="mm/dd/yyyy" />
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="flex justify-between mt-8">
-                            <button className="rounded-full text-white text-xl font-semibold w-[calc(50%_-_20px)] px-4 py-3 bg-primary transition-all hover:bg-[#045162] disabled:bg-[#6c757d] disabled:cursor-default" disabled>Back</button>
-                            <button className="rounded-full text-white text-xl font-semibold w-[calc(50%_-_20px)] px-4 py-3 bg-primary transition-all hover:bg-[#045162]">Continue</button>
+                        <div className="flex justify-between mt-8 2xl:w-[75%]">
+                            <button className="rounded-full text-white text-xl font-semibold w-[calc(50%_-_20px)] px-4 py-3 bg-[#6c757d] transition-all hover:bg-[#045162] disabled:bg-[#6c757d] disabled:cursor-default" disabled={step === 1 ? true : false} onClick={() => setStep(step - 1)} >Back</button>
+                            {
+                                step !== 3 && <button className="rounded-full text-white text-xl font-semibold w-[calc(50%_-_20px)] px-4 py-3 bg-primary transition-all hover:bg-[#045162]" onClick={() => setStep(step + 1)}>Continue</button>
+                            }
+                            {
+                                step === 3 && <button className="rounded-full text-white text-xl font-semibold w-[calc(50%_-_20px)] px-4 py-3 bg-primary transition-all hover:bg-[#045162]" onClick={() => submitHandle()}>Submit</button>
+                            }
                         </div>
                     </div>
                 </div>

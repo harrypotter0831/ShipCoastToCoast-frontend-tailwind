@@ -10,7 +10,7 @@ const Header = () => {
 
     return (
         <div className="flex justify-around">
-            <div className={`max-w-[1320px] w-full flex xl:items-center justify-between flex-col xl:flex-row px-4 py-1 overflow-hidden transition-all ${menuToggle ? 'h-[calc(70px_+_0.5rem)]' : 'h-[calc(70px_+_248px_+_0.5rem)]'}`}>
+            <div className={`max-w-[1320px] w-full flex xl:items-center justify-between flex-col xl:flex-row px-4 py-1 overflow-hidden transition-all xl:h-auto ${menuToggle ? 'h-[calc(70px_+_0.5rem)]' : 'h-[calc(70px_+_248px_+_0.5rem)]'}`}>
                 <div className="flex flex-col xl:flex-row">
                     <div className="flex w-full xl:w-auto justify-between items-center mr-4 h-[70px]">
                         <Link to={'/'}>
