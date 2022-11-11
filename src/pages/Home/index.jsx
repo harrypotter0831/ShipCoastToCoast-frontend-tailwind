@@ -30,14 +30,14 @@ const Home = () => {
                         <p className="text-white text-[calc(1.275rem_+_.3vw)] leading-normal">Our network of reliable auto shipping companies are fully licensed, bonded, and insured to protect your investment and give you peace of mind when you ship your car.
                         </p>
                     </div>
-                    <div className="flex flex-col w-full lg:w-1/2 bg-home-gradient p-12">
+                    <div className="flex flex-col w-full lg:w-1/2 bg-home-gradient p-6 md:p-12">
                         <p className="font-extrabold text-[#045e73] text-lg mb-4">GET YOUR QUOTES: STEP {'3'} OF 3</p>
                         <div className="w-full flex">
                             <span className="rounded-full bg-[#d9d9d9] block h-[9px] w-[30px] mr-4"></span>
                             <span className="rounded-full bg-[#ffffff] block h-[9px] w-[120px] mr-4"></span>
                             <span className="rounded-full bg-[#d9d9d9] block h-[9px] w-[30px]"></span>
                         </div>
-                        <h1 className="text-white text-6xl font-light leading-tight md:mb-8 md:mr-8">
+                        <h1 className="text-white text-[calc(1.475rem_+_2.7vw)] font-light leading-tight md:mb-8 md:mr-8">
                             Tell us where you're going?
                         </h1>
 
@@ -49,29 +49,29 @@ const Home = () => {
                                 </div>
                                 <div className="flex px-[9px] items-start mt-2">
                                     <img className="mr-[calc(10px_+_.5rem)]" src={dashLineImage} alt='dash-line' />
-                                    <div className="flex items-center w-full">
+                                    <div className="flex flex-col md:flex-row items-center w-full">
                                         <input className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Ciry, State" />
-                                        <p className="font-bold text-lg text-white mx-3">OR</p>
+                                        <p className="font-bold text-lg text-white mx-3 my-2">OR</p>
                                         <input className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Zip Code" />
                                     </div>
                                 </div>
                             </div>
                             <div className="flex flex-col">
-                                <div className="flex items-start">
+                                <div className="flex items-start mt-2">
                                     <img className="w-[20px] mr-2" src={locationIcon} alt="point" />
                                     <h4 className="font-bold text-xl text-white">Dropoff Location</h4>
                                 </div>
                                 <div className="flex px-[9px] items-start mt-2">
                                     <img className="mr-[calc(10px_+_.5rem)]" src={dashLineImage} alt='dash-line' />
-                                    <div className="flex items-center w-full">
+                                    <div className="flex flex-col md:flex-row items-center w-full">
                                         <input className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Ciry, State" />
-                                        <p className="font-bold text-lg text-white mx-3">OR</p>
+                                        <p className="font-bold text-lg text-white mx-3 my-2">OR</p>
                                         <input className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Zip Code" />
                                     </div>
                                 </div>
                             </div>
                             <div className="flex flex-col">
-                                <div className="flex items-start">
+                                <div className="flex items-start mt-2">
                                     <img className="w-[20px] mr-2" src={locationIcon} alt="point" />
                                     <h4 className="font-bold text-xl text-white">When</h4>
                                 </div>
