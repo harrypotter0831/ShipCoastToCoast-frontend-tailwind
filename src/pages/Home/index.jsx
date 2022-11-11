@@ -43,54 +43,132 @@ const Home = () => {
                             <span className={`rounded-full block h-[9px] ${step === 2 ? "bg-[#ffffff] w-[120px]" : "bg-[#d9d9d9] w-[30px]"} mr-4`}></span>
                             <span className={`rounded-full block h-[9px] ${step === 3 ? "bg-[#ffffff] w-[120px]" : "bg-[#d9d9d9] w-[30px]"}`}></span>
                         </div>
-                        <h1 className="text-white text-[calc(1.475rem_+_2.7vw)] font-light leading-tight md:mb-8 md:mr-8">
-                            Tell us where you're going?
-                        </h1>
 
-                        <div className="flex flex-col">
-                            <div className="flex flex-col">
-                                <div className="flex items-start">
-                                    <img className="w-[20px] mr-2" src={locationIcon} alt="point" />
-                                    <h4 className="font-bold text-xl text-white">Pickup Location</h4>
-                                </div>
-                                <div className="flex px-[9px] items-start mt-2">
-                                    <img className="mr-[calc(10px_+_.5rem)]" src={dashLineImage} alt='dash-line' />
-                                    <div className="flex flex-col md:flex-row items-center w-full 2xl:w-[70%]">
-                                        <input className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Ciry, State" />
-                                        <p className="font-bold text-lg text-white mx-3 my-2">OR</p>
-                                        <input className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Zip Code" />
+                        {
+                            step === 1 ? (
+                                <>
+                                    <h1 className="text-white text-[calc(1.475rem_+_2.7vw)] font-light leading-tight md:mb-8 md:mr-8">
+                                        Tell us where you're going?
+                                    </h1>
+
+                                    <div className="flex flex-col">
+                                        <div className="flex flex-col">
+                                            <div className="flex items-start">
+                                                <img className="w-[20px] mr-2" src={locationIcon} alt="point" />
+                                                <h4 className="font-bold text-xl text-white">Pickup Location</h4>
+                                            </div>
+                                            <div className="flex px-[9px] items-start mt-2">
+                                                <img className="mr-[calc(10px_+_.5rem)]" src={dashLineImage} alt='dash-line' />
+                                                <div className="flex flex-col md:flex-row items-center w-full 2xl:w-[70%]">
+                                                    <input className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Ciry, State" />
+                                                    <p className="font-bold text-lg text-white mx-3 my-2">OR</p>
+                                                    <input className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Zip Code" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-col">
+                                            <div className="flex items-start mt-2">
+                                                <img className="w-[20px] mr-2" src={locationIcon} alt="point" />
+                                                <h4 className="font-bold text-xl text-white">Dropoff Location</h4>
+                                            </div>
+                                            <div className="flex px-[9px] items-start mt-2">
+                                                <img className="mr-[calc(10px_+_.5rem)]" src={dashLineImage} alt='dash-line' />
+                                                <div className="flex flex-col md:flex-row items-center w-full 2xl:w-[70%]">
+                                                    <input className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Ciry, State" />
+                                                    <p className="font-bold text-lg text-white mx-3 my-2">OR</p>
+                                                    <input className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Zip Code" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-col">
+                                            <div className="flex items-start mt-2">
+                                                <img className="w-[20px] mr-2" src={locationIcon} alt="point" />
+                                                <h4 className="font-bold text-xl text-white">When</h4>
+                                            </div>
+                                            <div className="flex px-[9px] items-start mt-2">
+                                                <div className="flex items-center ml-[20px] w-full 2xl:w-[70%]">
+                                                    <input className="w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" type='date' placeholder="mm/dd/yyyy" />
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div className="flex flex-col">
-                                <div className="flex items-start mt-2">
-                                    <img className="w-[20px] mr-2" src={locationIcon} alt="point" />
-                                    <h4 className="font-bold text-xl text-white">Dropoff Location</h4>
-                                </div>
-                                <div className="flex px-[9px] items-start mt-2">
-                                    <img className="mr-[calc(10px_+_.5rem)]" src={dashLineImage} alt='dash-line' />
-                                    <div className="flex flex-col md:flex-row items-center w-full 2xl:w-[70%]">
-                                        <input className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Ciry, State" />
-                                        <p className="font-bold text-lg text-white mx-3 my-2">OR</p>
-                                        <input className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Zip Code" />
+                                </>
+                            ) : step === 2 ? (
+                                <>
+                                    <h1 className="text-white text-[calc(1.475rem_+_2.7vw)] font-light leading-tight md:mb-8 md:mr-8">
+                                        What kind of vehicle are you shipping?
+                                    </h1>
+
+                                    <div className="flex flex-col">
+                                        <p className="text-xl font-bold text-white mb-4">Vehicle Details</p>
+                                        <div className="flex flex-col">
+                                            <div className="flex flex-col w-full md:w-[80%]">
+                                                <select className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input appearance-none bg-select-icon bg-no-repeat bg-[length:16px_12px] bg-right-75 mb-4">
+                                                    <option className="p-2" value={'Make'}>Make</option>
+                                                    <option className="p-2" value={'Acura'}>Acura</option>
+                                                    <option className="p-2" value={'Audi'}>Audi</option>
+                                                </select>
+                                                <select className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input appearance-none bg-select-icon bg-no-repeat bg-[length:16px_12px] bg-right-75 mb-4">
+                                                    <option className="p-2" value={'Make'}>Make</option>
+                                                    <option className="p-2" value={'Acura'}>Acura</option>
+                                                    <option className="p-2" value={'Audi'}>Audi</option>
+                                                </select>
+                                                <select className="min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input appearance-none bg-select-icon bg-no-repeat bg-[length:16px_12px] bg-right-75 mb-4">
+                                                    <option className="p-2" value={'Make'}>Make</option>
+                                                    <option className="p-2" value={'Acura'}>Acura</option>
+                                                    <option className="p-2" value={'Audi'}>Audi</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div className="flex flex-col my-6">
+                                            <p className="text-xl font-bold text-white mb-4">Is your vehicle running?</p>
+                                            <div className="flex">
+                                                <div className="flex items-center mr-8">
+                                                    <input id="yes" name='vehicle' value={'true'} className="w-[40px] h-[40px] focus:border-[#86b7fe] focus:shadow-input border border-solid border-transparent appearance-none bg-white checked:bg-[#045e73] checked:border-[#045e73]" type='radio' />
+                                                    <label className="text-white text-2xl pl-2" for='yes'>Yes</label>
+                                                </div>
+                                                <div className="flex items-center">
+                                                    <input id="no" name='vehicle' value={'false'} className="w-[40px] h-[40px] focus:border-[#86b7fe] focus:shadow-input border border-solid border-transparent appearance-none bg-white checked:bg-[#045e73] checked:border-[#045e73]" type='radio' />
+                                                    <label className="text-white text-2xl pl-2" for='no'>No</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div className="flex flex-col">
-                                <div className="flex items-start mt-2">
-                                    <img className="w-[20px] mr-2" src={locationIcon} alt="point" />
-                                    <h4 className="font-bold text-xl text-white">When</h4>
-                                </div>
-                                <div className="flex px-[9px] items-start mt-2">
-                                    <div className="flex items-center ml-[20px] w-full 2xl:w-[70%]">
-                                        <input className="w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" type='date' placeholder="mm/dd/yyyy" />
+                                </>
+                            ) : (
+                                <>
+                                    <h1 className="text-white text-[calc(1.475rem_+_2.7vw)] font-light leading-tight md:mb-8 md:mr-8">
+                                        What's the best way to reach you?
+                                    </h1>
+
+                                    <div className="flex flex-col">
+                                        <p className="text-xl font-bold text-white mb-4">Vehicle Details</p>
+                                        <div className="flex flex-col w-full md:w-[90%]">
+                                            <div className="mb-4 flex justify-between">
+                                                <input className="min-w-[100px] w-[calc(50%_-_0.5rem)] bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Full Name" />
+                                                <input className="min-w-[100px] w-[calc(50%_-_0.5rem)] bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Phone Number" />
+                                            </div>
+                                            <input className="mb-4 min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Email Address" />
+                                            <input className="mb-4 min-w-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Confirm Email Address" />
+                                            <textarea className="mb-4 min-w-[100px] h-[100px] w-full bg-white text-[#212529] p-3 border border-solid border-[#ced4da] transition-colors focus:border-[#86b7fe] focus:shadow-input" placeholder="Comments"></textarea>
+                                        </div>
+
+                                        <div className="flex flex-col my-6">
+                                            <div className="flex">
+                                                <div className="flex items-center mr-8">
+                                                    <input id="interseting" name='vehicle' value={'true'} className="w-[40px] h-[40px] focus:border-[#86b7fe] focus:shadow-input border border-solid border-transparent appearance-none bg-white checked:bg-[#045e73] checked:border-[#045e73]" type='checkbox' />
+                                                    <label className="text-white text-xl font-bold pl-2" for='interseting'>I am also interested in household moving.</label>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
+                                </>
+                            )
+                        }
 
                         <div className="flex justify-between mt-8 2xl:w-[75%]">
-                            <button className="rounded-full text-white text-xl font-semibold w-[calc(50%_-_20px)] px-4 py-3 bg-[#6c757d] transition-all hover:bg-[#045162] disabled:bg-[#6c757d] disabled:cursor-default" disabled={step === 1 ? true : false} onClick={() => setStep(step - 1)} >Back</button>
+                            <button className="rounded-full text-white text-xl font-semibold w-[calc(50%_-_20px)] px-4 py-3 bg-[#6c757d] transition-all hover:bg-[#5c636a] disabled:bg-[#6c757d] disabled:cursor-default" disabled={step === 1 ? true : false} onClick={() => setStep(step - 1)} >Back</button>
                             {
                                 step !== 3 && <button className="rounded-full text-white text-xl font-semibold w-[calc(50%_-_20px)] px-4 py-3 bg-primary transition-all hover:bg-[#045162]" onClick={() => setStep(step + 1)}>Continue</button>
                             }
@@ -146,7 +224,7 @@ const Home = () => {
             </div>
 
             <Footer />
-        </div>
+        </div >
     )
 }
 
