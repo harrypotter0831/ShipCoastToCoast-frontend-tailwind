@@ -17,7 +17,9 @@ const Header = () => {
                             <div className="w-[70px] sm:w-[250px] md:w-[300px]">
                                 <img className="hidden md:block w-full" src={logo} alt="logo" />
                                 <img className="hidden sm:block md:hidden w-full" src={logoSm} alt="logo" />
-                                <img className="block sm:hidden w-full" src={logoXs} alt="logo" />
+                                <div className="p-1 sm:p-0 block sm:hidden w-full">
+                                    <img className="block sm:hidden w-full" src={logoXs} alt="logo" />
+                                </div>
                             </div>
                         </Link>
                         <button className="xl:hidden cursor-pointer border border-solid border-[rgba(0,0,0,.1)] px-2 py-1.5">

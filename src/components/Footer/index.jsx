@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div className="">
             <div className="bg-[#045e73] flex justify-around">
-                <div className="max-w-[1320px] w-full flex flex-wrap justify-center pt-12 px-10">
+                <div className="max-w-[1320px] w-full flex flex-wrap justify-center pt-12 px-6 sm:px-10">
                     <div className="w-full flex flex-col items-center md:items-start md:w-1/3 lg:w-1/4 px-8 m-8">
                         <Link className="hover:underline text-lg text-white p-1" to={'/'}>Get A Quote</Link>
                         <Link className="hover:underline text-lg text-white p-1" to={'/'}>Contact Us</Link>

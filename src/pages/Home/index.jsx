@@ -28,21 +28,22 @@ const Home = () => {
 
             <div className="w-full flex flex-col">
                 <div className="flex flex-wrap">
-                    <div className="flex justify-center flex-col bg-home-image bg-cover py-10 px-[calc(10%)] w-full lg:w-1/2">
-                        <h1 className="text-white text-[calc(1.525rem_+_3.3vw)] leading-tight">
+                    <div className="flex justify-center flex-col bg-home-image bg-cover py-10 px-4 xs:px-6 md:px-[calc(10%)] w-full lg:w-1/2">
+                        <h1 className="text-white text-3xl sm:text-[calc(1.525rem_+_3.3vw)] leading-tight">
                             Instantly Get
                             <br className="hidden lg:block" />
+                            <span className="sm:hidden">&nbsp;</span>
                             10 Free Auto
                             <br className="hidden lg:block" />
-                            Transport
+                            <span className="sm:hidden">&nbsp;</span>Transport
                             <br className="hidden lg:block" />
-                            Quotes
+                            <span className="sm:hidden">&nbsp;</span>Quotes
                         </h1>
-                        <p className="text-white text-[calc(1.275rem_+_.3vw)] leading-normal">Our network of reliable auto shipping companies are fully licensed, bonded, and insured to protect your investment and give you peace of mind when you ship your car.
+                        <p className="text-white text-lg sm:text-[calc(1.275rem_+_.3vw)] leading-normal">Our network of reliable auto shipping companies are fully licensed, bonded, and insured to protect your investment and give you peace of mind when you ship your car.
                         </p>
                     </div>
                     <div className="flex flex-col w-full lg:w-1/2 bg-home-gradient p-6 md:p-12">
-                        <p className="font-extrabold text-[#045e73] text-lg mb-4">GET YOUR QUOTES: STEP {'3'} OF 3</p>
+                        <p className="font-extrabold text-[#045e73] text-md sm:text-lg mb-4">GET YOUR QUOTES: STEP {step} OF 3</p>
                         <div className="w-full flex">
                             <span className={`rounded-full block h-[9px] ${step === 1 ? "bg-[#ffffff] w-[120px]" : "bg-[#d9d9d9] w-[30px]"} mr-4`}></span>
                             <span className={`rounded-full block h-[9px] ${step === 2 ? "bg-[#ffffff] w-[120px]" : "bg-[#d9d9d9] w-[30px]"} mr-4`}></span>
@@ -132,11 +133,11 @@ const Home = () => {
                                     <div className="flex">
                                         <div className="flex items-center mr-8">
                                             <input id="yes" name='vehicle' value={'true'} className="w-[40px] h-[40px] focus:border-[#86b7fe] focus:shadow-input border border-solid border-transparent appearance-none bg-white checked:bg-[#045e73] checked:border-[#045e73]" type='radio' />
-                                            <label className="text-white text-2xl pl-2" for='yes'>Yes</label>
+                                            <label className="text-white text-2xl pl-2" htmlFor='yes'>Yes</label>
                                         </div>
                                         <div className="flex items-center">
                                             <input id="no" name='vehicle' value={'false'} className="w-[40px] h-[40px] focus:border-[#86b7fe] focus:shadow-input border border-solid border-transparent appearance-none bg-white checked:bg-[#045e73] checked:border-[#045e73]" type='radio' />
-                                            <label className="text-white text-2xl pl-2" for='no'>No</label>
+                                            <label className="text-white text-2xl pl-2" htmlFor='no'>No</label>
                                         </div>
                                     </div>
                                 </div>
@@ -165,7 +166,7 @@ const Home = () => {
                                     <div className="flex">
                                         <div className="flex items-center mr-8">
                                             <input id="interseting" name='vehicle' value={'true'} className="w-[40px] h-[40px] focus:border-[#86b7fe] focus:shadow-input border border-solid border-transparent appearance-none bg-white checked:bg-[#045e73] checked:border-[#045e73]" type='checkbox' />
-                                            <label className="text-white text-xl font-bold pl-2" for='interseting'>I am also interested in household moving.</label>
+                                            <label className="text-white text-xl font-bold pl-2" htmlFor='interseting'>I am also interested in household moving.</label>
                                         </div>
                                     </div>
                                 </div>
@@ -191,7 +192,7 @@ const Home = () => {
                 </div>
 
                 <div className="flex flex-col items-center py-12">
-                    <h1 className="text-primary text-[4rem] font-bold py-4">Our Services</h1>
+                    <h1 className="text-primary text-5xl md:text-[4rem] font-bold py-0 md:py-4">Our Services</h1>
 
                     <div className="flex flex-wrap w-full justify-center items-stretch">
                         <div className="bg-[#f8f8f8] w-full sm:w-1/2 md:w-1/3 lg:w-1/4 max-w-[400px] mx-[20px] shadow">
