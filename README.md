@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# ShipCoastToCast-frontend
+
+React, Tailwind
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
